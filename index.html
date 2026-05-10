@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xueying Luo | Portfolio</title>
-    <!-- 引入 Google 字体增强高级感 -->
+    <title>Xueying Luo | 3D Character Animator</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2d3436;
             --accent-color: #0984e3;
             --bg-color: #f9f9f9;
-            --text-color: #636e72;
-            --max-width: 850px; /* 限制页面宽度，保证阅读舒适度 */
+            --text-color: #4a4a4a; /* 稍微加深一点颜色，增强阅读感 */
+            --max-width: 1000px; /* 调宽了页面 */
         }
 
         * {
@@ -25,48 +24,51 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--primary-color);
-            line-height: 1.8;
+            line-height: 1.9; /* 稍微增加行间距，更适合长段落阅读 */
             padding: 40px 20px;
         }
 
-        /* 页面容器限制宽度并居中 */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
         }
 
-        /* 顶部导航/名字区域 */
         header {
             text-align: center;
-            padding: 80px 0 40px;
+            padding: 80px 0 30px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem; /* 稍微加大名字字体 */
             font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
+            letter-spacing: -1.5px;
+            margin-bottom: 25px;
             color: var(--primary-color);
         }
 
-        /* 自我介绍 */
+        /* 个人介绍部分 */
         .intro {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 30px;
+            text-align: left; /* 改为左对齐，更适合长文字阅读 */
+            max-width: 900px; /* 介绍文字的宽度 */
+            margin: 0 auto 40px;
             color: var(--text-color);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+        }
+
+        .intro p {
+            margin-bottom: 20px; /* 段落间距 */
+            text-indent: 0em; /* 如果需要首行缩进可以改为 2em */
         }
 
         /* 简历按钮 */
         .btn-container {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px; /* 调整了这里的距离，现在更紧凑了 */
         }
 
         .resume-btn {
             display: inline-block;
-            padding: 12px 35px;
+            padding: 14px 40px;
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
@@ -82,11 +84,10 @@
             box-shadow: 0 6px 20px rgba(9, 132, 227, 0.3);
         }
 
-        /* 作品展示标题 */
         .section-title {
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 40px;
+            font-size: 2rem;
+            margin-bottom: 50px;
             position: relative;
             padding-bottom: 15px;
         }
@@ -97,34 +98,34 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 40px;
+            width: 50px;
             height: 3px;
             background-color: var(--accent-color);
         }
 
-        /* 视频展示网格 */
         .work-grid {
             display: grid;
-            grid-template-columns: 1fr; /* 手机端单列 */
+            grid-template-columns: 1fr;
             gap: 40px;
+            margin-bottom: 60px;
         }
 
         @media (min-width: 768px) {
             .work-grid {
-                grid-template-columns: 1fr 1fr; /* 电脑端双列 */
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         .video-card {
             background: white;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
             transition: transform 0.3s ease;
         }
 
         .video-card:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
         }
 
         video {
@@ -135,93 +136,70 @@
         }
 
         .video-info {
-            padding: 20px;
+            padding: 25px;
         }
 
         .video-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
         }
 
         .video-info p {
-            font-size: 0.9rem;
-            color: var(--text-color);
+            font-size: 0.95rem;
+            color: #7f8c8d;
         }
 
         footer {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 80px;
             padding-bottom: 40px;
-            font-size: 0.8rem;
-            color: #b2bec3;
+            font-size: 0.9rem;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- 头部 -->
         <header>
-            <h1>罗雪莹</h1>
+            <h1>Xueying Luo</h1>
             <div class="intro">
-                <p>我一直专精于3D角色动画，尤其着迷于动物、生物与奇幻角色的表演。研究自然界的运动与行为，像一场没有尽头的观察课——从猫科动物的肩胛骨运动到狼群的协作步态，再到幻想生物独有的、不存在的运动逻辑。每一次发现都像见证一个奇迹，而这个世界上恰好有那么多神奇的生物值得去理解、去拆解、去重新诠释。
-
-角色动画是一片足够广阔的领域。几年学下来，非但没有触到边界，反而觉得它比想象中更加自由。把对真实动物的观察延伸到奇幻生物身上，是一个令人兴奋的挑战——那些现实中不存在的生物，该如何让它们的动作看起来“可信”？这是做出真正能打动人心的动画的关键。
-
-除了动画，也涉足过制作流程中的其他阶段。其中布料与头发模拟是一个意外着迷的领域——模拟和动画可以互相成就，好的模拟能让角色的表演更加真实自然，甚至能为复杂的动画难题提供解法。
-
-这个领域还在不断生长，也想继续跟着它一起，往前再多走一点。
-
-</p>
+                <p>我一直专精于 3D 角色动画，尤其着迷于动物、生物与奇幻角色的表演。研究自然界的运动与行为，像一场没有尽头的观察课——从猫科动物的肩胛骨运动到鸟类飞行的翅膀运动，再到幻想生物全由我们打造的运动逻辑。每一次发现都像见证一个奇迹，而这世上有那么多神奇的生物值得去理解、去拆解、去重新诠释。</p>
+                
+                <p>角色动画是一片足够广阔的领域。几年学下来，非但没有触到边界，反而觉得它比想象中更加自由。在这个过程中也慢慢意识到，3D 动画的魅力恰恰在于它的复杂性。没有一个环节是孤立存在的，所有细碎的工作咬合在一起，依赖不同专业的人共同协作，才有可能让一个角色真正活过来。这个领域还在不断成长，我想继续跟着它一起，往前再多走一点。</p>
             </div>
+            
             <div class="btn-container">
-                <!-- 替换为你存放在 GitHub 或 COS 上的 PDF 链接 -->
-                <a href="罗雪莹_动画师简历_2026.pdf" target="_blank" class="resume-btn">个人简历</a>
+                <a href="resume.pdf" target="_blank" class="resume-btn">View Resume / 简历</a>
             </div>
         </header>
 
-        <!-- 作品展示 -->
-        <h2 class="section-title">作品展示</h2>
+        <h2 class="section-title">Showreel / 作品展示</h2>
         
         <div class="work-grid">
-            <!-- 视频作品 1 -->
             <div class="video-card">
-                <video 
-                    controls 
-                    playsinline 
-                    preload="metadata" 
-                    poster="poster1.jpg">
-                    <!-- 替换为你腾讯云 COS 的视频直链 -->
-                    <source src="https://your-cos-link-1.mp4" type="video/mp4">
-                    您的浏览器不支持视频播放。
+                <video controls playsinline preload="metadata" poster="poster1.jpg">
+                    <source src="COS链接1.mp4" type="video/mp4">
                 </video>
                 <div class="video-info">
-                    <h3>项目名称 01</h3>
-                    <p>项目简短描述，例如：品牌宣传片 / 2024</p>
+                    <h3>Character Animation Reel</h3>
+                    <p>3D 角色动画混剪 / 2024</p>
                 </div>
             </div>
 
-            <!-- 视频作品 2 -->
             <div class="video-card">
-                <video 
-                    controls 
-                    playsinline 
-                    preload="metadata" 
-                    poster="poster2.jpg">
-                    <!-- 替换为你腾讯云 COS 的视频直链 -->
-                    <source src="https://your-cos-link-2.mp4" type="video/mp4">
-                    您的浏览器不支持视频播放。
+                <video controls playsinline preload="metadata" poster="poster2.jpg">
+                    <source src="COS链接2.mp4" type="video/mp4">
                 </video>
                 <div class="video-info">
-                    <h3>项目名称 02</h3>
-                    <p>项目简短描述，例如：纪录片剪辑 / 2023</p>
+                    <h3>Creature Performance Study</h3>
+                    <p>生物运动表现研究 / 2023</p>
                 </div>
             </div>
         </div>
 
-        <!-- 页脚 -->
         <footer>
-            <p>&copy; 2024 Xueying Luo. Built with Passion.</p>
+            <p>&copy; 2024 Xueying Luo. Portfolio Site.</p>
         </footer>
     </div>
 
