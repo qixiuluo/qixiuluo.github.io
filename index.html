@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a1a1a;
+            --primary-color: #2d3436;
             --accent-color: #0984e3;
-            --bg-color: #ffffff;
-            --text-color: #3d3d3d;
-            --max-width: 1000px;
+            --bg-color: #f9f9f9;
+            --text-color: #4a4a4a; /* 稍微加深一点颜色，增强阅读感 */
+            --max-width: 1000px; /* 调宽了页面 */
         }
 
         * {
@@ -21,10 +21,10 @@
         }
 
         body {
-            font-family: 'Inter', "SF Pro Display", -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--primary-color);
-            line-height: 1.9;
+            line-height: 1.9; /* 稍微增加行间距，更适合长段落阅读 */
             padding: 40px 20px;
         }
 
@@ -33,183 +33,183 @@
             margin: 0 auto;
         }
 
-        /* 头部区域 */
         header {
-            padding: 100px 0 40px;
+            text-align: center;
+            padding: 80px 0 30px;
         }
 
         h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem; /* 稍微加大名字字体 */
             font-weight: 700;
-            letter-spacing: -2px;
-            margin-bottom: 40px;
-            text-align: center;
+            letter-spacing: -1.5px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
         }
 
-        /* 个人介绍段落 */
+        /* 个人介绍部分 */
         .intro {
-            max-width: 880px;
-            margin: 0 auto 50px;
+            text-align: left; /* 改为左对齐，更适合长文字阅读 */
+            max-width: 900px; /* 介绍文字的宽度 */
+            margin: 0 auto 40px;
             color: var(--text-color);
-            font-size: 1.1rem;
-            text-align: justify; /* 两端对齐，让长文本边缘整齐 */
+            font-size: 1.15rem;
         }
 
         .intro p {
-            margin-bottom: 25px;
+            margin-bottom: 20px; /* 段落间距 */
+            text-indent: 0em; /* 如果需要首行缩进可以改为 2em */
         }
 
-        /* 按钮 */
+        /* 简历按钮 */
         .btn-container {
             text-align: center;
-            margin-bottom: 100px;
+            margin-bottom: 60px; /* 调整了这里的距离，现在更紧凑了 */
         }
 
         .resume-btn {
             display: inline-block;
-            padding: 15px 45px;
+            padding: 14px 40px;
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
-            border-radius: 4px; /* 改为微圆角，更有工业设计感 */
+            border-radius: 50px;
             font-weight: 500;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .resume-btn:hover {
-            background-color: var(--accent-color);
             transform: translateY(-2px);
+            background-color: var(--accent-color);
+            box-shadow: 0 6px 20px rgba(9, 132, 227, 0.3);
         }
 
-        /* 视频作品区域 */
         .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 50px;
             text-align: center;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
 
         .work-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 60px; /* 加大视频块之间的间距 */
-            margin-bottom: 80px;
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
-        @media (min-width: 850px) {
+        @media (min-width: 768px) {
             .work-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
         .video-card {
-            display: flex;
-            flex-direction: column;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
         }
 
-        .video-wrapper {
-            position: relative;
-            background: #f0f0f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            line-height: 0; /* 消除视频下方微小缝隙 */
+        .video-card:hover {
+            transform: translateY(-5px);
         }
 
         video {
             width: 100%;
+            display: block;
             aspect-ratio: 16 / 9;
-            object-fit: cover;
-            background: #000;
+            background-color: #000;
         }
 
         .video-info {
-            padding: 20px 5px;
+            padding: 25px;
         }
 
         .video-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: #111;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
         }
 
         .video-info p {
             font-size: 0.95rem;
-            color: #888;
-            line-height: 1.6;
+            color: #7f8c8d;
         }
 
         footer {
             text-align: center;
-            margin-top: 120px;
+            margin-top: 80px;
             padding-bottom: 40px;
-            font-size: 0.85rem;
-            color: #aaa;
-            border-top: 1px solid #eee;
-            padding-top: 40px;
-        }
-
-        /* 增加平滑滚动效果 */
-        html {
-            scroll-behavior: smooth;
+            font-size: 0.9rem;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- 头部与名字 -->
         <header>
-            <h1>Xueying Luo</h1>
-            
+            <h1>罗雪莹  Xueying Luo</h1>
             <div class="intro">
-                <p>我一直专精于 3D 角色动画，尤其着迷于动物、生物与奇幻角色的表演。研究自然界的运动与行为，像一场没有尽头的观察课——从猫科动物的肩胛骨运动到鸟类飞行的翅膀运动，再到幻想生物全由我们打造的运动逻辑。每一次发现都像见证一个奇迹，而这世上有那么多神奇的生物值得去理解、去拆解、去重新诠释。</p>
+                <p>    我一直专精于 3D 角色动画，尤其着迷于动物、生物与奇幻角色的表演。研究自然界的运动与行为，像一场没有尽头的观察课——从猫科动物的肩胛骨运动到鸟类飞行的翅膀运动，再到幻想生物全由我们打造的运动逻辑。每一次发现都像见证一个奇迹，而这世上有那么多神奇的生物值得去理解、去拆解、去重新诠释。</p>
                 
-                <p>角色动画是一片足够广阔的领域。几年学下来，非但没有触到边界，反而觉得它比想象中更加自由。在这个过程中也慢慢意识到，3D 动画的魅力恰恰在于它的复杂性。没有一个环节是孤立存在的，所有细碎的工作咬合在一起，依赖不同专业的人共同协作，才有可能让一个角色真正活过来。这个领域还在不断成长，我想继续跟着它一起，往前再多走一点。</p>
+                <p>    角色动画是一片足够广阔的领域。几年学下来，非但没有触到边界，反而觉得它比想象中更加自由。在这个过程中也慢慢意识到，3D 动画的魅力恰恰在于它的复杂性。没有一个环节是孤立存在的，所有细碎的工作咬合在一起，依赖不同专业的人共同协作，才有可能让一个角色真正活过来。这个领域还在不断成长，我想继续跟着它一起，往前再多走一点。</p>
             </div>
             
             <div class="btn-container">
-                <a href="resume.pdf" target="_blank" class="resume-btn">DOWNLOAD RESUME</a>
+                <a href="罗雪莹_动画师简历_2026.pdf" target="_blank" class="resume-btn">简历 / Resume</a>
             </div>
         </header>
 
-        <!-- 作品展示部分 -->
-        <h2 class="section-title">Featured Works</h2>
+        <h2 class="section-title">作品展示 / Showreel</h2>
+        
+<!-- 作品展示部分 -->
         
         <div class="work-grid">
             <!-- 视频 1：项目经历 -->
             <div class="video-card">
+                <div class="video-header">
+                    <h3>Project Experience</h3>
+                    <p>项目经历</p>
+                </div>
                 <div class="video-wrapper">
                     <video controls playsinline preload="metadata" poster="project_cover.jpg">
                         <source src="你的项目经历视频链接.mp4" type="video/mp4">
                         您的浏览器不支持播放视频。
                     </video>
                 </div>
-                <div class="video-info">
-                    <h3>Project Experience</h3>
-                    <p>参与商业项目或团队协作的动画片段。主要负责角色表演、生物姿态控制及镜头调度。</p>
-                </div>
             </div>
 
             <!-- 视频 2：个人作品 -->
             <div class="video-card">
+                <div class="video-header">
+                    <h3>Personal Works</h3>
+                    <p>个人作品</p>
+                </div>
                 <div class="video-wrapper">
                     <video controls playsinline preload="metadata" poster="personal_cover.jpg">
                         <source src="你的个人作品视频链接.mp4" type="video/mp4">
                         您的浏览器不支持播放视频。
                     </video>
                 </div>
-                <div class="video-info">
-                    <h3>Personal Works</h3>
-                    <p>个人创作作品集。专注于非人生物的解构与重塑，探索在 3D 环境下生物运动的自然美感。</p>
-                </div>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2024 Xueying Luo &bull; 3D Character Animator &bull; All Rights Reserved.</p>
+            <p>&copy; 2024 Xueying Luo. Portfolio Site.</p>
         </footer>
     </div>
 
